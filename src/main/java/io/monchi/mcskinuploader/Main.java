@@ -30,14 +30,13 @@ public class Main {
                 interval = Integer.parseInt(args[2]);
             }
             catch (NumberFormatException e){
-                CONSOLE_LOG.warn("An interval must be integer. It has been set to 10 minutes (Default).");
+                CONSOLE_LOG.warn("An interval must be integer. It has been set to 3 minutes (Default).");
             }
         }
 
         CONSOLE_LOG.info("UUID: " + uuid);
         CONSOLE_LOG.info("TOKEN: " + StringUtils.repeat('*', token.length() - 4) + token.substring(token.length() - 4));
         CONSOLE_LOG.info("INTERVAL: " + interval + " minutes");
-
 
         Timer timer = new Timer();
         try {
